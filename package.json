@@ -1,0 +1,15 @@
+{
+  "name": "landing-barajas",
+  "version": "1.0.0",
+  "description": "Landing page for Barajas Españolas matches",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "vitest": "^1.0.0"
+  }
+}
