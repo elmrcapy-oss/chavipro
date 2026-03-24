@@ -38,7 +38,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('assets/fondo.png');
+    background-image: url('assets/fondo.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.5;
@@ -122,20 +122,23 @@ body {
     border-radius: 50%;
     animation: blinkBlush 2s ease-in-out infinite;
     mix-blend-mode: screen;
+    will-change: opacity, transform, filter;
 }
 
 @keyframes blinkBlush {
     0% { opacity: 0.6; transform: scale(0.9); }
-    50% { opacity: 1; transform: scale(1.15); filter: blur(35px); }
+    50% { opacity: 1; transform: scale(1.15); }
     100% { opacity: 0.6; transform: scale(0.9); }
 }
 
 .floating-cards {
     width: 100%;
     height: auto;
+    max-width: 480px;
     object-fit: contain;
     animation: float 6s ease-in-out infinite;
     filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.8));
+    will-change: transform;
 }
 
 @keyframes float {
@@ -205,6 +208,8 @@ body {
     border-top: 1px solid rgba(255,215,0,0.1);
     position: relative;
     z-index: 2;
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
 }
 
 .benefits-container {
