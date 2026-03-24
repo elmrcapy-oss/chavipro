@@ -1,3 +1,7 @@
+import { inject } from '@vercel/analytics';
+
+inject();
+
 document.addEventListener('DOMContentLoaded', () => {
     const benefitItems = document.querySelectorAll('.benefit-item');
     
